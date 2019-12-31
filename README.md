@@ -1,14 +1,7 @@
-# The Guerilla Programming Language
+# The Guerilla interpreter
 
 ## Inspiration
-Guerilla Interpreter is based on the golang programming language,
-and inspired by @thorsten monkey patched programming language
-
-## intended features/paradigm
-* OOP
-* functional
-* Concurrency
-* 
+Guerilla Interpreter is inspired by @thorsten monkey patched programming language
 
 ## Sample syntax
 ```javascript
