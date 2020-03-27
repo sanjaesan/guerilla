@@ -1,4 +1,6 @@
 # The Guerilla interpreter
+* Tried implementing Pratt parsers(Recursive descent parser), could have 
+gone for yacc tool to auto generate parsers but i'll kill the fun 
 
 ## Inspiration
 Guerilla Interpreter is inspired by @thorsten monkey patched programming language

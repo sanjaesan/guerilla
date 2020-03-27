@@ -1,8 +1,10 @@
 package lexer
 
-import "guerilla/token"
+import (
+	"unicode"
 
-import "unicode"
+	"github.com/guerilla/token"
+)
 
 // Lexer -
 type Lexer struct {

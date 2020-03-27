@@ -3,9 +3,10 @@ package repl
 import (
 	"bufio"
 	"fmt"
-	"guerilla/lexer"
-	"guerilla/token"
 	"io"
+
+	"github.com/guerilla/lexer"
+	"github.com/guerilla/token"
 )
 
 //PROMPT ...
