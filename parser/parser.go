@@ -9,13 +9,17 @@ import (
 //Parser ...
 type Parser struct {
 	l         *lexer.Lexer
+	errors    []string
 	curToken  token.Token
 	peekToken token.Token
 }
 
 //New -
 func New(lex *lexer.Lexer) *Parser {
-	p := &Parser{l: lex}
+	p := &Parser{
+		l:      lex,
+		errors: []string{},
+	}
 	p.nextToken()
 	p.nextToken()
 	return p

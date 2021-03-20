@@ -2,11 +2,6 @@ package ast
 
 import "github.com/guerilla/token"
 
-// Node interface is implemented by every node in our abstract syntax tree
-type Node interface {
-	TokenLiteral() string
-}
-
 // Statement -
 type Statement interface {
 	Node
@@ -17,6 +12,11 @@ type Statement interface {
 type Expression interface {
 	Node
 	ExpressionNode()
+}
+
+// Node interface is implemented by every node in our abstract syntax tree
+type Node interface {
+	TokenLiteral() string
 }
 
 // Program -
@@ -45,6 +45,19 @@ func (ls *LetStatement) statementNode() {
 //TokenLiteral -
 func (ls *LetStatement) TokenLiteral() string {
 	return ls.Token.Literal
+}
+
+//ReturnStatement -
+type ReturnStatement struct {
+	Token       token.Token
+	ReturnValue string
+}
+
+func (rs *ReturnStatement) statementNode() {}
+
+//TokenLiteral -
+func (rs *ReturnStatement) TokenLiteral() string {
+	return rs.Token.Literal
 }
 
 //Identifier -
